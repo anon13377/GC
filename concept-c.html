@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gile Cheese — From Milk to Main Street · Cuba City, WI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500;62..125,700;62..125,900&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wax:#1E3A2B; --wax-deep:#152B20; --cream:#F5EFE2; --butter:#E9C46A; --ink:#20281F; --line:rgba(245,239,226,.18);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Karla',sans-serif;background:var(--wax);color:var(--cream);font-size:17px;line-height:1.65}
+h1,h2,h3,.disp{font-family:'Archivo',sans-serif;font-stretch:112%;line-height:1.02;letter-spacing:-.01em}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--butter)}
+.chap{font-family:'Archivo';font-weight:900;font-stretch:120%;font-size:.95rem;color:var(--butter);letter-spacing:.08em}
+
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(30,58,43,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1160px;margin:0 auto;padding:15px 28px;display:flex;align-items:center;gap:24px}
+.mark{font-family:'Archivo';font-weight:900;font-stretch:120%;font-size:1.2rem;text-transform:uppercase}
+.mark span{color:var(--butter)}
+.nav-links{margin-left:auto;display:flex;gap:24px;font-size:14.5px;font-weight:700}
+.nav-links a{text-decoration:none;opacity:.85;transition:color .18s,opacity .18s}
+.nav-links a:hover{color:var(--butter);opacity:1}
+.call{border:1.5px solid var(--butter);color:var(--butter);padding:8px 19px;border-radius:4px;text-decoration:none;font-weight:700;font-size:14px;transition:background .18s,color .18s}
+.call:hover{background:var(--butter);color:var(--wax-deep)}
+
+/* hero */
+.hero{padding:96px 0 84px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,6.2vw,5rem);font-weight:900;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--butter)}
+.hero p{max-width:30em;margin:24px 0 32px;color:rgba(245,239,226,.85);font-size:1.1rem}
+.btn{display:inline-block;background:var(--butter);color:var(--wax-deep);font-weight:700;padding:15px 32px;border-radius:4px;text-decoration:none;transition:transform .18s ease-out,filter .18s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn.ghost{background:transparent;color:var(--cream);border:1.5px solid var(--line);margin-left:12px}
+.btn.ghost:hover{border-color:var(--butter);color:var(--butter)}
+.hero-photo{position:relative}
+.hero-photo .main{border-radius:10px;height:440px;width:100%;object-fit:cover;box-shadow:0 28px 60px rgba(0,0,0,.45)}
+.hero-photo .float{position:absolute;left:-40px;bottom:-34px;width:220px;height:160px;object-fit:cover;border-radius:8px;border:4px solid var(--wax);box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.hero-photo .award{position:absolute;top:-20px;right:-16px;background:var(--butter);color:var(--wax-deep);font-family:'Archivo';font-weight:900;text-align:center;padding:16px 18px;border-radius:8px;box-shadow:0 14px 30px rgba(0,0,0,.4);transform:rotate(3deg)}
+.hero-photo .award b{display:block;font-size:1.6rem;line-height:1}
+.hero-photo .award span{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-family:'Karla';font-weight:700}
+
+/* chapters */
+.chapter{padding:92px 0;border-top:1px solid var(--line)}
+.chapter .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.chapter.flip .wrap{direction:rtl}
+.chapter.flip .wrap>*{direction:ltr}
+.chapter h2{font-size:clamp(2rem,4.4vw,3.2rem);font-weight:900;text-transform:uppercase;margin:14px 0 18px}
+.chapter p{color:rgba(245,239,226,.82);margin-bottom:13px;max-width:32em}
+.ph{position:relative}
+.ph .main{border-radius:10px;height:400px;width:100%;object-fit:cover;box-shadow:0 24px 54px rgba(0,0,0,.45)}
+.ph .float{position:absolute;right:-24px;bottom:-28px;width:200px;height:140px;object-fit:cover;border-radius:8px;border:4px solid var(--wax);box-shadow:0 16px 36px rgba(0,0,0,.5)}
+.chapter.flip .ph .float{right:auto;left:-24px}
+.facts{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap}
+.facts div b{font-family:'Archivo';font-weight:900;font-size:1.6rem;color:var(--butter);display:block;line-height:1.1}
+.facts div span{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:rgba(245,239,226,.6)}
+
+/* cream visit chapter */
+.arrive{background:var(--cream);color:var(--ink);padding:96px 0;border-top:1px solid var(--line)}
+.arrive .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.arrive .chap{color:#A5731B}
+.arrive .eyebrow{color:#A5731B}
+.arrive h2{font-size:clamp(2rem,4.4vw,3.2rem);font-weight:900;text-transform:uppercase;margin:14px 0 18px}
+.arrive p{color:#4d5546;margin-bottom:12px}
+.hours{border:1.5px solid #cfc5ad;background:#FDFAF2;border-radius:10px;overflow:hidden;margin-top:20px;max-width:400px}
+.hours div{display:flex;justify-content:space-between;padding:13px 20px;border-bottom:1px solid #e7dfc9;font-size:15.5px;font-weight:500}
+.hours div:last-child{border-bottom:none}
+.hours b{text-transform:uppercase;letter-spacing:.1em;font-size:13px;color:#A5731B}
+.arrive img{border-radius:10px;box-shadow:0 24px 54px rgba(32,40,31,.25);height:440px;width:100%;object-fit:cover}
+.arrive .note{font-size:14px;color:#7a715c;margin-top:16px;max-width:26em}
+
+footer{padding:36px 0;font-size:13.5px;color:rgba(245,239,226,.55);border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+
+@media (max-width:960px){
+  .hero .wrap,.chapter .wrap,.arrive .wrap{grid-template-columns:1fr}
+  .chapter.flip .wrap{direction:ltr}
+  .nav-links{display:none}
+  .hero-photo .float{left:8px;bottom:-24px}
+  .ph .float{right:8px}
+  .chapter.flip .ph .float{left:8px}
+  .hero-photo .award{right:8px}
+}
+@media (max-width:560px){
+  .btn.ghost{margin:14px 0 0}
+  .hero-photo .main,.ph .main,.arrive img{height:320px}
+  .hero-photo .float,.ph .float{width:150px;height:104px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <span class="mark">Gile <span>Cheese</span></span>
+    <div class="nav-links">
+      <a href="#milk">The milk</a>
+      <a href="#make">The make</a>
+      <a href="#case">The case</a>
+      <a href="#visit">Main Street</a>
+    </div>
+    <a class="call" href="tel:6087443456">608-744-3456</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">A short story in four chapters · Est. 1946</span>
+      <h1>From milk to <em>Main Street.</em></h1>
+      <p>Every block in our case makes the same short trip: Wisconsin milk, a hand-worked vat, an aging room, and forty feet to the counter. The Gile family has walked it for four generations.</p>
+      <a class="btn" href="#milk">Follow the cheese</a>
+      <a class="btn ghost" href="#visit">Skip to the store</a>
+    </div>
+    <div class="hero-photo">
+      <img class="main" src="../assets/2-store-interior-1.jpg" alt="The cheese case at Gile Cheese">
+      <img class="float" src="../assets/9-making-cheese-curds-6.jpg" alt="Fresh curds in the vat room">
+      <div class="award"><b>200+</b><span>awards · State Champion</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="chapter" id="milk">
+  <div class="wrap">
+    <div>
+      <span class="chap">Chapter 01</span>
+      <h2>The milk arrives before sunrise.</h2>
+      <p>Fresh Wisconsin milk hits the vat while Cuba City is still dark. The Carr Cheese Factory has started its mornings this way since 1946 — same building, same family, same standard.</p>
+      <div class="facts">
+        <div><b>1946</b><span>Family-run since</span></div>
+        <div><b>4</b><span>Generations</span></div>
+      </div>
+    </div>
+    <div class="ph">
+      <img class="main" src="../assets/4-making-swiss-cheese.jpg" alt="Swiss cheese being made in the vat">
+      <img class="float" src="../assets/8-making-cheese-2.jpg" alt="Cheese heading to the press">
+    </div>
+  </div>
+</section>
+
+<section class="chapter flip" id="make">
+  <div class="wrap">
+    <div>
+      <span class="chap">Chapter 02</span>
+      <h2>Curd, cut and worked by hand.</h2>
+      <p>This is our vat mid-make, not a stock photo. Curd gets cut, cooked, and raked by hand; cheddar goes to the press to age — some of it for five years. Curds are bagged the same day, still squeaking.</p>
+      <div class="facts">
+        <div><b>5 yr</b><span>Oldest cheddar</span></div>
+        <div><b>Daily</b><span>Fresh curds</span></div>
+      </div>
+    </div>
+    <div class="ph">
+      <img class="main" src="../assets/5-making-cheese-curds-2.jpg" alt="Cheddar curds poured across the vat">
+      <img class="float" src="../assets/7-making-cheese-curds-4.jpg" alt="Raking curds by hand">
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="case">
+  <div class="wrap">
+    <div>
+      <span class="chap">Chapter 03</span>
+      <h2>Forty feet to the case.</h2>
+      <p>The outlet store sits at the front of the factory, so everything is cut, wrapped, and priced like a factory store should be. 140+ cheeses deep — 28 cheddars, baby swiss from our own vat, colby, spreads, string, and gift boxes built to order.</p>
+      <div class="facts">
+        <div><b>140+</b><span>Cheeses in the case</span></div>
+        <div><b>28</b><span>Kinds of cheddar</span></div>
+      </div>
+    </div>
+    <div class="ph">
+      <img class="main" src="../assets/3-store-interior-2.jpg" alt="Coolers full of cheese inside the store">
+      <img class="float" src="../assets/12-baby-swiss.jpg" alt="Baby swiss wheels">
+    </div>
+  </div>
+</section>
+
+<section class="arrive" id="visit">
+  <div class="wrap">
+    <div>
+      <span class="chap">Chapter 04</span>
+      <h2>Main Street, Cuba City.</h2>
+      <p>116 N. Main St., Cuba City, WI 53807 · <a href="tel:6087443456">608-744-3456</a></p>
+      <p>Voted Area's Best Cheese Store 20 years running by the people who can walk here.</p>
+      <div class="hours">
+        <div><b>Mon – Fri</b><span>9:00 – 5:00</span></div>
+        <div><b>Saturday</b><span>9:00 – 4:00</span></div>
+        <div><b>Sunday</b><span>Closed</span></div>
+      </div>
+      <p class="note">Mail orders ship September through May — good cheddar refuses to ride in a hot truck.</p>
+    </div>
+    <img src="../assets/1-cheese-store.jpg" alt="The Gile Cheese storefront on Main Street">
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Gile Cheese LLC · Carr Cheese Factory · Cuba City, Wisconsin</span>
+    <span>Proudly Wisconsin Cheese · Est. 1946</span>
+  </div>
+</footer>
+
+</body>
+</html>

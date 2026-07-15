@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gile Cheese Factory Outlet — Est. 1946, Cuba City WI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Karla:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#C22A1E; --deep-red:#8F1C13; --gold:#F5B31B; --butter:#FFD974;
+  --cream:#FFF6DF; --ink:#1E1710; --blue:#20518A;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Karla',sans-serif;background:var(--gold);color:var(--ink);font-size:17px;line-height:1.6;
+  background-image:radial-gradient(circle at 1px 1px, rgba(143,28,19,.14) 1.2px, transparent 0);
+  background-size:22px 22px}
+.slab{font-family:'Alfa Slab One',serif;font-weight:400}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* the label frame */
+.label{max-width:1180px;margin:26px auto;background:var(--cream);border:6px solid var(--ink);border-radius:26px;overflow:hidden;box-shadow:0 14px 40px rgba(30,23,16,.28)}
+.label-inner{border:3px dashed var(--red);border-radius:18px;margin:10px}
+
+/* top ticket bar */
+.ticket{background:var(--red);color:var(--cream);display:flex;justify-content:space-between;align-items:center;padding:10px 26px;font-weight:800;font-size:14px;letter-spacing:.12em;text-transform:uppercase;border-radius:10px 10px 0 0}
+.ticket span b{color:var(--butter)}
+
+/* hero */
+.hero{text-align:center;padding:52px 24px 40px;position:relative}
+.arch{width:min(640px,92%);margin:0 auto}
+.est-row{display:flex;justify-content:center;gap:18px;align-items:center;margin:6px 0 10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-size:14px;color:var(--deep-red)}
+.est-row::before,.est-row::after{content:"";width:70px;height:3px;background:var(--red)}
+h1.slab{font-size:clamp(3rem,8vw,6.2rem);color:var(--red);text-transform:uppercase;line-height:.95;
+  text-shadow:3px 3px 0 var(--butter),6px 6px 0 rgba(30,23,16,.18)}
+.factory-line{display:inline-block;background:var(--ink);color:var(--cream);font-weight:800;letter-spacing:.3em;text-transform:uppercase;font-size:15px;padding:8px 26px;margin-top:16px;border-radius:4px}
+.hero p.lede{max-width:36em;margin:24px auto 30px;font-size:1.12rem}
+.btn{display:inline-block;background:var(--red);color:var(--cream);font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:15px 32px;border-radius:8px;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);text-decoration:none;transition:transform .16s ease-out,box-shadow .16s ease-out}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink)}
+.btn.alt{background:var(--cream);color:var(--ink);margin-left:14px}
+
+/* rosettes */
+.rosette{position:absolute;width:110px;text-align:center;font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.rosette .medal{width:92px;height:92px;margin:0 auto 6px;border-radius:50%;background:var(--blue);color:var(--cream);display:flex;flex-direction:column;justify-content:center;border:4px solid var(--gold);box-shadow:0 0 0 3px var(--blue);position:relative}
+.rosette .medal b{font-family:'Alfa Slab One';font-size:1.5rem;line-height:1}
+.rosette .medal small{font-size:9.5px;letter-spacing:.1em;padding:0 6px}
+.rosette .medal::after{content:"";position:absolute;bottom:-26px;left:50%;transform:translateX(-50%);border:14px solid transparent;border-top:20px solid var(--blue)}
+.ros-l{left:6%;top:110px}.ros-r{right:6%;top:110px}
+.ros-r .medal{background:var(--red);box-shadow:0 0 0 3px var(--red)}
+.ros-r .medal::after{border-top-color:var(--red)}
+
+/* marquee strip */
+.marquee{background:var(--ink);color:var(--butter);overflow:hidden;white-space:nowrap;padding:12px 0;font-weight:800;text-transform:uppercase;letter-spacing:.18em;font-size:14px}
+.marquee div{display:inline-block;animation:roll 36s linear infinite}
+@keyframes roll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marquee span{margin:0 22px}
+.marquee span::after{content:"★";margin-left:44px;color:var(--red)}
+
+/* cheese board */
+.board{padding:64px 24px}
+.board h2{text-align:center;font-size:clamp(2rem,4.5vw,3.2rem);color:var(--deep-red);text-transform:uppercase;margin-bottom:8px}
+.board .sub{text-align:center;max-width:38em;margin:0 auto 42px}
+.board-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1000px;margin:0 auto}
+.crate{background:var(--cream);border:3px solid var(--ink);border-radius:14px;padding:22px;position:relative;box-shadow:5px 5px 0 rgba(30,23,16,.9);transition:transform .16s ease-out}
+.crate:hover{transform:translateY(-4px) rotate(-.5deg)}
+.crate .stamp{position:absolute;top:-14px;right:16px;background:var(--gold);border:2.5px solid var(--ink);font-weight:800;font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;padding:4px 12px;border-radius:999px}
+.crate h3{font-family:'Alfa Slab One';font-size:1.35rem;color:var(--red);text-transform:uppercase;margin-bottom:8px}
+.crate p{font-size:15px}
+.crate .price{margin-top:14px;font-weight:800;border-top:2px dashed var(--red);padding-top:10px;display:flex;justify-content:space-between;font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+
+/* story band */
+.since{background:var(--red);color:var(--cream);padding:64px 24px;text-align:center;border-top:6px solid var(--ink);border-bottom:6px solid var(--ink)}
+.since h2{font-size:clamp(2rem,4.5vw,3.4rem);text-transform:uppercase;text-shadow:3px 3px 0 var(--deep-red);margin-bottom:16px}
+.since p{max-width:42em;margin:0 auto 12px;font-size:1.08rem}
+.since .badges{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:28px}
+.since .badge{background:var(--cream);color:var(--ink);border:3px solid var(--ink);border-radius:999px;padding:10px 22px;font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:.06em}
+.since .badge b{color:var(--red)}
+
+/* visit ticket */
+.visit{padding:70px 24px}
+.stub{max-width:860px;margin:0 auto;background:var(--cream);border:3px solid var(--ink);border-radius:16px;display:grid;grid-template-columns:1.2fr 1fr;overflow:hidden;box-shadow:6px 6px 0 rgba(30,23,16,.9)}
+.stub-l{padding:36px}
+.stub-l h2{font-family:'Alfa Slab One';color:var(--red);font-size:1.9rem;text-transform:uppercase;margin-bottom:14px}
+.stub-l p{margin-bottom:8px;font-weight:600}
+.stub-l .small{font-size:14px;font-weight:400;margin-top:14px;color:#5c4f3d}
+.stub-r{background:var(--butter);border-left:3px dashed var(--ink);padding:36px;display:flex;flex-direction:column;justify-content:center;gap:8px}
+.stub-r h3{font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:13px;margin-bottom:6px}
+.stub-r div{display:flex;justify-content:space-between;font-weight:700;font-size:15px;border-bottom:1.5px dotted var(--ink);padding:6px 0}
+
+footer{text-align:center;padding:34px 24px 46px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.1em;color:var(--deep-red)}
+
+@media (max-width:860px){
+  .board-grid{grid-template-columns:1fr 1fr}
+  .rosette{display:none}
+  .stub{grid-template-columns:1fr}
+  .stub-r{border-left:none;border-top:3px dashed var(--ink)}
+}
+@media (max-width:540px){.board-grid{grid-template-columns:1fr}.ticket{font-size:11px;gap:8px}.btn.alt{margin:14px 0 0}}
+@media (prefers-reduced-motion:reduce){.marquee div{animation:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="label">
+  <div class="label-inner">
+
+    <div class="ticket">
+      <span>Est. <b>1946</b> · Cuba City, Wis.</span>
+      <span>Wisconsin <b>State Champion</b></span>
+      <span><b>608-744-3456</b></span>
+    </div>
+
+    <header class="hero">
+      <div class="rosette ros-l"><div class="medal"><b>200+</b><small>Awards Won</small></div>Blue-ribbon record</div>
+      <div class="rosette ros-r"><div class="medal"><b>20</b><small>Yrs · Area's Best</small></div>Voted by locals</div>
+      <div class="est-row"><span>Genuine Wisconsin Cheese</span></div>
+      <h1 class="slab">Gile Cheese</h1>
+      <div class="factory-line">Factory Outlet</div>
+      <p class="lede">Four generations of the Gile family have made cheese at the Carr Cheese Factory since 1946. 140+ cheeses in the case, 28 cheddars deep, and curds that squeak back.</p>
+      <a class="btn" href="#board">Open the cheese board</a>
+      <a class="btn alt" href="#visit">Visit the store</a>
+    </header>
+
+    <div class="marquee" aria-hidden="true">
+      <div>
+        <span>Squeaky-fresh curds</span><span>5-year aged cheddar</span><span>Baby swiss</span><span>Colby</span><span>Pepper jack</span><span>Muenster</span><span>Brick</span><span>String cheese</span><span>Cold-pack spreads</span><span>Gift boxes</span>
+        <span>Squeaky-fresh curds</span><span>5-year aged cheddar</span><span>Baby swiss</span><span>Colby</span><span>Pepper jack</span><span>Muenster</span><span>Brick</span><span>String cheese</span><span>Cold-pack spreads</span><span>Gift boxes</span>
+      </div>
+    </div>
+
+    <section class="board" id="board">
+      <h2 class="slab">The Cheese Board</h2>
+      <p class="sub">Cut and wrapped at the factory. Every risk level of cheddar sharpness represented — mild to a 5-year that bites back.</p>
+      <div class="board-grid">
+        <div class="crate"><span class="stamp">28 kinds</span><h3>Cheddar</h3><p>From mellow mild to extra sharp 5-year aged. Our deepest bench and the reason for most of the ribbons.</p><div class="price"><span>Aged on site</span><span>★★★</span></div></div>
+        <div class="crate"><span class="stamp">Made daily</span><h3>Cheese curds</h3><p>Bagged the day they're made. If they don't squeak, we don't sell them.</p><div class="price"><span>Fresh daily</span><span>★★★</span></div></div>
+        <div class="crate"><span class="stamp">House vat</span><h3>Baby Swiss</h3><p>Made in our own vat — mild, nutty, and the sleeper hit of the case.</p><div class="price"><span>Factory made</span><span>★★★</span></div></div>
+        <div class="crate"><h3>Colby &amp; Jack</h3><p>The Wisconsin original plus Monterey and pepper jack for the spice crowd.</p><div class="price"><span>Wisconsin classic</span><span>★★</span></div></div>
+        <div class="crate"><h3>Spreads &amp; String</h3><p>Cold-pack spreads in a dozen flavors, string cheese by the armful.</p><div class="price"><span>Lunchbox ready</span><span>★★</span></div></div>
+        <div class="crate"><span class="stamp">Ships Sep–May</span><h3>Gift boxes</h3><p>Built to order with cheese, summer sausage, and whatever the occasion calls for.</p><div class="price"><span>Any budget</span><span>★★★</span></div></div>
+      </div>
+    </section>
+
+    <section class="since">
+      <h2 class="slab">Same family. Same vats. Since 1946.</h2>
+      <p>The Carr Cheese Factory has been operated by the Gile family for four generations. That's 80 years of small-batch cheesemaking in Cuba City — and a trophy shelf of 200+ awards to show for it, including Wisconsin State Champion.</p>
+      <div class="badges">
+        <span class="badge"><b>200+</b> awards</span>
+        <span class="badge">State <b>Champion</b></span>
+        <span class="badge"><b>140+</b> cheeses</span>
+        <span class="badge">Proudly <b>Wisconsin</b></span>
+      </div>
+    </section>
+
+    <section class="visit" id="visit">
+      <div class="stub">
+        <div class="stub-l">
+          <h2>Admit one cheese lover</h2>
+          <p>116 N. Main St., Cuba City, WI 53807</p>
+          <p><a href="tel:6087443456">608-744-3456</a></p>
+          <p class="small">Shipping pauses June–August — cheese and hot trucks don't mix. Stop in year-round, or order September through May.</p>
+        </div>
+        <div class="stub-r">
+          <h3>Store hours</h3>
+          <div><span>Mon – Fri</span><span>9:00 – 5:00</span></div>
+          <div><span>Saturday</span><span>9:00 – 4:00</span></div>
+          <div><span>Sunday</span><span>Closed</span></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>Gile Cheese LLC · Carr Cheese Factory · Cuba City, Wisconsin · Est. 1946</footer>
+
+  </div>
+</div>
+
+</body>
+</html>

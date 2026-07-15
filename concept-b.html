@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gile Cheese — Postcard from Cuba City, Wisconsin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F6F1E6; --paper:#FFFDF7; --ink:#332A21; --terra:#C05A38; --olive:#6B7B3C; --sand:#E5DAC4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Familjen Grotesk',sans-serif;background:var(--cream);color:var(--ink);font-size:17px;line-height:1.65;
+  background-image:linear-gradient(rgba(51,42,33,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(51,42,33,.035) 1px,transparent 1px);
+  background-size:36px 36px}
+h1,h2,h3{line-height:1.06;letter-spacing:-.015em}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+.hand{font-family:'Caveat',cursive;color:var(--terra)}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--olive)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:40;background:rgba(246,241,230,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--sand)}
+.nav-in{max-width:1140px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:24px}
+.mark{font-weight:700;font-size:1.2rem}
+.mark span{color:var(--terra)}
+.nav-links{margin-left:auto;display:flex;gap:24px;font-size:14.5px;font-weight:600}
+.nav-links a{text-decoration:none;transition:color .18s}
+.nav-links a:hover{color:var(--terra)}
+.call{background:var(--terra);color:var(--paper);padding:9px 20px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14px;transition:transform .18s ease-out,box-shadow .18s}
+.call:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(192,90,56,.35)}
+
+/* hero collage */
+.hero{padding:76px 0 90px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.4rem);font-weight:700}
+.hero h1 em{font-style:normal;color:var(--terra)}
+.hero .lede{margin:22px 0 30px;font-size:1.12rem;max-width:30em;color:#5a4d3e}
+.btn{display:inline-block;background:var(--terra);color:var(--paper);font-weight:700;padding:15px 30px;border-radius:999px;text-decoration:none;transition:transform .18s ease-out,box-shadow .18s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(192,90,56,.35)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink);margin-left:12px}
+.btn.ghost:hover{box-shadow:0 8px 18px rgba(51,42,33,.15)}
+.hero-note{margin-top:26px;font-size:1.5rem}
+
+.collage{position:relative;height:520px}
+.snap{position:absolute;background:var(--paper);padding:12px 12px 40px;box-shadow:0 14px 34px rgba(51,42,33,.22);border-radius:4px;transition:transform .22s ease-out}
+.snap:hover{transform:scale(1.03) rotate(0deg)!important;z-index:5}
+.snap img{width:100%;height:100%;object-fit:cover}
+.snap figcaption{position:absolute;bottom:8px;left:0;right:0;text-align:center;font-family:'Caveat';font-size:1.25rem;color:#5a4d3e}
+.s1{width:300px;height:250px;top:6px;left:0;transform:rotate(-4deg);z-index:1}
+.s2{width:280px;height:240px;top:60px;right:0;transform:rotate(3deg);z-index:2}
+.s3{width:320px;height:250px;bottom:0;left:90px;transform:rotate(-1.5deg);z-index:3}
+.stamp{position:absolute;top:-8px;right:60px;z-index:4;width:104px;height:104px;border-radius:50%;background:var(--olive);color:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;transform:rotate(8deg);box-shadow:0 10px 24px rgba(51,42,33,.25);border:3px dashed rgba(255,253,247,.55)}
+.stamp b{font-size:1.5rem;line-height:1.1}
+
+/* counter section */
+.counter{background:var(--paper);border-top:1px solid var(--sand);border-bottom:1px solid var(--sand);padding:96px 0}
+.counter-head{max-width:620px;margin-bottom:52px}
+.counter-head h2{font-size:clamp(2rem,4.2vw,3rem);font-weight:700;margin:10px 0 14px}
+.counter-head p{color:#5a4d3e}
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.item{background:var(--cream);border:1px solid var(--sand);border-radius:14px;overflow:hidden;text-decoration:none;box-shadow:0 4px 0 var(--sand);transition:transform .18s ease-out,box-shadow .18s ease-out}
+.item:hover{transform:translateY(-5px);box-shadow:0 14px 28px rgba(51,42,33,.16)}
+.item img{height:190px;width:100%;object-fit:cover}
+.item .body{padding:18px 20px 22px}
+.item h3{font-size:1.15rem;font-weight:700;margin-bottom:5px}
+.item h3 span{font-family:'Caveat';color:var(--terra);font-size:1.15rem;margin-left:8px}
+.item p{font-size:14.5px;color:#5a4d3e}
+
+/* story strip */
+.story{padding:96px 0}
+.story-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
+.story h2{font-size:clamp(2rem,4.2vw,3rem);font-weight:700;margin:10px 0 16px}
+.story p{margin-bottom:14px;color:#5a4d3e;max-width:32em}
+.story .sig{font-family:'Caveat';font-size:1.7rem;color:var(--terra);margin-top:10px}
+.story-photos{position:relative;height:440px}
+.story-photos .snap{padding-bottom:44px}
+.p1{width:340px;height:270px;top:0;right:20px;transform:rotate(2.5deg);z-index:1}
+.p2{width:300px;height:240px;bottom:0;left:0;transform:rotate(-3deg);z-index:2}
+
+/* visit */
+.visit{background:var(--olive);color:var(--paper);padding:96px 0}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.visit .eyebrow{color:var(--sand)}
+.visit h2{font-size:clamp(2rem,4.2vw,3rem);font-weight:700;margin:10px 0 18px}
+.visit p{color:rgba(255,253,247,.85);margin-bottom:8px}
+.hours{background:rgba(255,253,247,.1);border:1px solid rgba(255,253,247,.25);border-radius:14px;overflow:hidden;margin-top:20px;max-width:400px}
+.hours div{display:flex;justify-content:space-between;padding:13px 20px;border-bottom:1px solid rgba(255,253,247,.18);font-size:15.5px}
+.hours div:last-child{border-bottom:none}
+.visit .snap{position:relative;transform:rotate(1.5deg);max-width:480px;justify-self:center}
+.visit .snap:hover{transform:rotate(0)}
+.visit .note{font-size:14px;color:rgba(255,253,247,.7);margin-top:18px}
+
+footer{padding:36px 0;text-align:center;font-size:14px;color:#8a7a64}
+footer .hand{font-size:1.4rem;display:block;margin-bottom:6px}
+
+@media (max-width:960px){
+  .hero-grid,.story-grid,.visit-grid{grid-template-columns:1fr}
+  .case-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .collage{height:480px;max-width:520px;margin:0 auto}
+  .s1{left:0}.s2{right:0}.s3{left:40px}
+  .story-photos{max-width:520px;margin:0 auto;width:100%}
+}
+@media (max-width:560px){
+  .case-grid{grid-template-columns:1fr}
+  .btn.ghost{margin:14px 0 0}
+  .collage{height:430px}
+  .s1{width:240px;height:200px}.s2{width:220px;height:190px;top:40px}.s3{width:250px;height:200px;left:20px}
+  .stamp{width:92px;height:92px;right:10px}
+  .story-photos{height:400px}
+  .p1{width:260px;height:210px;right:0}.p2{width:240px;height:200px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <span class="mark">Gile <span>Cheese</span></span>
+    <div class="nav-links">
+      <a href="#case">The counter</a>
+      <a href="#story">Our story</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <a class="call" href="tel:6087443456">608-744-3456</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Cuba City, Wisconsin</span>
+      <h1>Greetings from the best little <em>cheese store</em> in Wisconsin.</h1>
+      <p class="lede">Four generations of the Gile family, one working factory, and a case with 140+ cheeses — including curds so fresh they squeak back. Voted Area's Best Cheese Store 20 years running.</p>
+      <a class="btn" href="#case">See what's at the counter</a>
+      <a class="btn ghost" href="#visit">Come say hi</a>
+      <p class="hero-note hand">— wish you were here (we have samples)</p>
+    </div>
+    <div class="collage">
+      <div class="stamp"><b>200+</b>awards<br>since 1946</div>
+      <figure class="snap s1"><img src="../assets/1-cheese-store.jpg" alt="The storefront on Main Street"><figcaption>Main St., Cuba City</figcaption></figure>
+      <figure class="snap s2"><img src="../assets/5-making-cheese-curds-2.jpg" alt="Curds being poured in the vat"><figcaption>curd day!</figcaption></figure>
+      <figure class="snap s3"><img src="../assets/2-store-interior-1.jpg" alt="Inside the store"><figcaption>the case, fully loaded</figcaption></figure>
+    </div>
+  </div>
+</header>
+
+<section class="counter" id="case">
+  <div class="wrap">
+    <div class="counter-head">
+      <span class="eyebrow">At the counter</span>
+      <h2>140+ cheeses, cut and wrapped right here.</h2>
+      <p>Every photo is ours — the actual blocks and bags in the case this week.</p>
+    </div>
+    <div class="case-grid">
+      <a class="item" href="#"><img src="../assets/Home-Cheddar.png" alt="Cheddar blocks"><div class="body"><h3>Cheddar<span>28 kinds!</span></h3><p>Mild through a 5-year aged that bites back.</p></div></a>
+      <a class="item" href="#"><img src="../assets/Home-Cheese-Curds.png" alt="Cheese curds"><div class="body"><h3>Curds<span>still squeaky</span></h3><p>Made on site, bagged the same day.</p></div></a>
+      <a class="item" href="#"><img src="../assets/12-baby-swiss.jpg" alt="Baby swiss"><div class="body"><h3>Baby swiss<span>house vat</span></h3><p>Mild, nutty, quietly award-winning.</p></div></a>
+      <a class="item" href="#"><img src="../assets/home-colby.png" alt="Colby"><div class="body"><h3>Colby &amp; jack</h3><p>The Wisconsin original plus pepper jack.</p></div></a>
+      <a class="item" href="#"><img src="../assets/Home-Cheese-Spreads.png" alt="Cheese spreads"><div class="body"><h3>Spreads &amp; string</h3><p>Cold-pack spreads in a dozen flavors.</p></div></a>
+      <a class="item" href="#"><img src="../assets/Home-Gift-Boxes.png" alt="Gift boxes"><div class="body"><h3>Gift boxes<span>ships Sep–May</span></h3><p>Built to order, any budget.</p></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap story-grid">
+    <div>
+      <span class="eyebrow">Since 1946</span>
+      <h2>Same family. Same vats. Eighty years.</h2>
+      <p>The Gile family has operated the Carr Cheese Factory for four generations. The recipes and the stubborn standards got handed down with it — which is how a small shop in Cuba City ends up a Wisconsin State Champion with 200+ awards.</p>
+      <p>The store sits at the front of the factory, so the distance from vat to your cooler is measured in steps.</p>
+      <p class="sig">— the Gile family</p>
+    </div>
+    <div class="story-photos">
+      <figure class="snap p1"><img src="../assets/4-making-swiss-cheese.jpg" alt="Making swiss in the vat"><figcaption>swiss day in the vat room</figcaption></figure>
+      <figure class="snap p2"><img src="../assets/9-making-cheese-curds-6.jpg" alt="Fresh curds ready to bag"><figcaption>ready to bag</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div>
+      <span class="eyebrow">Come visit</span>
+      <h2>116 N. Main St., Cuba City, WI 53807</h2>
+      <p><a href="tel:6087443456">608-744-3456</a></p>
+      <div class="hours">
+        <div><span>Mon – Fri</span><span>9:00 – 5:00</span></div>
+        <div><span>Saturday</span><span>9:00 – 4:00</span></div>
+        <div><span>Sunday</span><span>Closed</span></div>
+      </div>
+      <p class="note">Shipping pauses June–August — good cheddar hates a hot truck. Stop in year-round.</p>
+    </div>
+    <figure class="snap"><img src="../assets/3-store-interior-2.jpg" alt="Inside the Gile Cheese outlet store"><figcaption>see you at the counter</figcaption></figure>
+  </div>
+</section>
+
+<footer>
+  <span class="hand">made with milk, patience, and 80 years of practice</span>
+  Gile Cheese LLC · Carr Cheese Factory · Cuba City, Wisconsin · Est. 1946
+</footer>
+
+</body>
+</html>
